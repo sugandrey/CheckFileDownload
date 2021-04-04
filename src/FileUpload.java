@@ -31,7 +31,7 @@ public class FileUpload {
 	
 		co.setExperimentalOption("prefs", chromePrefs);
 		WebDriver driver = new ChromeDriver(co);
-		driver.get("https://www.foxitsoftware.com/pdf-to-jpg");
+		driver.get("");
 		Thread.sleep(2000);
 		driver.findElement(By.cssSelector("a[data-toggle='collapse']")).click();
 		driver.findElement(By.cssSelector(".cta_four.phantom.dropdown-toggle")).click();
