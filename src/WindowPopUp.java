@@ -13,24 +13,11 @@ public class WindowPopUp {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\user\\Downloads\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().deleteAllCookies();
-		driver.get("https://admin:admin@the-internet.herokuapp.com/");
+		driver.get("");
 		driver.findElement(By.xpath("//a[text()='Basic Auth']")).click();
 		NewPage newPage = new NewPage(driver);
-		System.out.println(newPage.getTestText().getText()); // The first way
-//		Set<String> windows = driver.getWindowHandles(); // The second way
-//		Iterator<String> iterator = windows.iterator();
-//		String childWindow = iterator.next();
-//		driver.switchTo().window(childWindow);
-//		WebElement element = driver.findElement(By.xpath("//div[@id='content']/div/p"));
-//		if(element.isDisplayed()) {
-//			System.out.println(element.getText());
-//			driver.close();
-//		}
-//		else {
-//			System.out.println("No such element");
-//			driver.close();
-//		}
-			
+		System.out.println(newPage.getTestText().getText());
+		
 		
 		driver.close();
 	}
